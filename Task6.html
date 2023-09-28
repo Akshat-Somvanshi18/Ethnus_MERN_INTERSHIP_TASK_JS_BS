@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <section class="d-flex justify-content-center mt-5">
+      <form
+        class="needs-validation was-validated w-50 border p-5"
+        novalidate=""
+        style="background-color: rgb(247, 246, 246)"
+      >
+        <div class="d-flex flex-column my-3">
+          <h6>Name</h6>
+          <div style="height: 70px;">
+            <input
+              class="rounded-0 px-2 form-control"
+              type="text"
+              required
+            />
+            <div class="invalid-feedback">Name is required.</div>
+          </div>
+        </div>
+        <div class="d-flex flex-column my-3">
+            <h6>Email</h6>
+            <div style="height: 70px;">
+              <input
+                class="rounded-0 px-2 form-control"
+                type="email"
+                required
+              />
+              <div class="invalid-feedback">Email is required.</div>
+            </div>
+          </div>
+          <div class="d-flex flex-column my-3">
+            <h6>Password</h6>
+            <div style="height: 70px;">
+              <input
+                class="rounded-0 px-2 form-control"
+                type="password"
+                required
+              />
+              <div class="invalid-feedback">Password is required.</div>
+            </div>
+          </div>
+          <div class="d-flex flex-column my-3">
+            <h6>Hobbies</h6>
+            <div style="height: 70px;">
+              <input
+                class="rounded-0 px-2 w-100 border"
+                type="number"
+                style="height: 40px;"
+              />
+            </div>
+          </div>
+        <button class="btn btn-danger text-light w-100 my-4" type="submit">
+          Submit
+        </button>
+      </form>
+    </section>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>

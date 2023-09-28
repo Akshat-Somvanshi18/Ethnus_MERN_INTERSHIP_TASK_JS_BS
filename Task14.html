@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task14</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        p{
+            margin: 0;
+        }
+
+        .container {
+            background: linear-gradient(to bottom,yellow ,rgb(212, 153, 162), pink,rgb(201, 150, 158));
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 600px;
+            margin: 10px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="tel"],
+        textarea,
+        select {
+            width: 400px;
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="number"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus{
+            outline: none;
+        }
+        textarea{
+            resize: none;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            float: right;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+        .in{
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-between;
+        }
+        h2{
+            text-align: center;
+            color: blue;
+        }
+        .gen{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+        .ingen{
+            display: flex;
+            gap: 4px;
+            width: 400px;
+            padding: 10px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .gen1{
+            display: flex;
+            gap: 2px;
+        }
+        .in2{
+            display: flex;
+            gap: 2px;
+        }
+        .buu{
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        <div class="in ">
+            <label for="firstName" style="width: 200px;">First Name:</label>
+            <input type="text" id="firstName" name="firstName">
+            <p class="error" id="firstNameError" style="width: 100px;"></p>
+        </div>
+        <div class="in ">
+            <label for="lastName" style="width: 200px;">Last Name:</label>
+            <input type="text" id="lastName" name="lastName">
+            <p class="error" id="lastNameError" style="width: 100px;"></p>
+        </div>
+        <div class="in ">
+            <label for="email" style="width: 200px;">Email:</label>
+            <input type="email" id="email" name="email">
+            <p class="error" id="emailError" style="width: 100px;"></p>
+        </div>
+        <div class="in ">
+            <label for="password" style="width: 200px;">Password:</label>
+            <input type="password" id="password" name="password">
+            <p class="error" id="passwordError" style="width: 100px;"></p>
+        </div>
+        <div class="in ">
+            <label for="confirmPassword" style="width: 200px;">Re-enter Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <p class="error" id="confirmPasswordError" style="width: 100px;"></p>
+        </div>
+        <div class="ingen">
+            <label style="width: 200px;">Gender:</label>
+            <div class="gen">
+                <div class="gen1">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="gen1">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <span class="error" id="genderError"></span>
+        </div>
+        <div class="in ">
+            <label for="age" style="width: 200px;">Age:</label>
+            <input type="number" id="age" name="age">
+            <p class="error" id="ageError" style="width: 100px;"></p>
+        </div>
+        <div class="in ">
+            <label for="phoneNumber" style="width: 200px;">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber">
+            <p class="error" id="phoneNumberError" style="width: 100px;"></p>
+        </div>
+        <div class="in ">
+            <label for="address" style="width: 200px;">Address:</label>
+            <textarea id="address" name="address"></textarea>
+            <p class="error" id="addressError" style="width: 100px;"></p>
+        </div>
+        <div class="in ">
+            <label for="state" style="width: 200px;">State:</label>
+            <input type="text" id="state" name="state">
+            <p class="error" id="stateError" style="width: 100px;"></p>
+        </div>
+        <div class="in ">
+            <label for="country" style="width: 200px;">Country:</label>
+            <select id="country" name="country">
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+            </select>
+            <p class="error" id="countryError"style="width: 100px;"></p>
+        </div>
+        <div class="in ">
+            <label style="width: 200px;">Languages Known:</label>
+            <input type="checkbox" id="english" name="languages" value="English">
+            <label for="english">English</label>
+            <input type="checkbox" id="kanada" name="languages" value="Kanada">
+            <label for="kanada">Kanada</label>
+            <input type="checkbox" id="hindi" name="languages" value="Hindi">
+            <label for="hindi">Hindi</label>
+            <input type="checkbox" id="telugu" name="languages" value="Telugu">
+            <label for="telugu">Telugu</label>
+            <p class="error" id="languagesError" style="width: 100px;"></p>
+        </div>
+        <div class="in2 " style="padding-top: 10px;">
+            <input type="checkbox" id="declaration">
+            <label for="declaration">Hereby I declare all the given details are true</label>
+            <p class="error" id="declarationError" style="width: 100px;"></p>
+        </div>
+
+        <p>Log in to the <a href="https://ethnus.com/">Ethnus</a> Website</p>
+        <div class="buu">
+            <button type="submit" class="submit-button">Register</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById("registrationForm");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Reset error messages
+        const errorElements = document.querySelectorAll(".error");
+        errorElements.forEach((element) => {
+            element.textContent = "";
+        });
+
+        // Get form values
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const age = document.getElementById("age").value;
+        const phoneNumber = document.getElementById("phoneNumber").value;
+        const address = document.getElementById("address").value;
+        const state = document.getElementById("state").value;
+        const country = document.getElementById("country").value;
+        const languages = document.querySelectorAll('input[name="languages"]:checked');
+        const declaration = document.getElementById("declaration");
+
+        // Validation logic for each field
+        let valid = true;
+        console.log(firstName);
+        if (firstName === "") {
+            document.getElementById("firstNameError").innerHTML = "Poor";
+            valid = false;
+        }
+
+        if (lastName === "") {
+            document.getElementById("lastNameError").textContent = "Required";
+            valid = false;
+        }
+
+        if (email === "") {
+            document.getElementById("emailError").textContent = "Required";
+            valid = false;
+        }
+
+        if (password === "") {
+            document.getElementById("passwordError").textContent = "Required";
+            valid = false;
+        }
+
+        if (confirmPassword === "") {
+            document.getElementById("confirmPasswordError").textContent = "Required";
+            valid = false;
+        } else if (password !== confirmPassword) {
+            document.getElementById("confirmPasswordError").textContent = "Passwords do not match";
+            valid = false;
+        }
+
+        if (!gender) {
+            document.getElementById("genderError").textContent = "Required";
+            valid = false;
+        }
+
+        if (age === "") {
+            document.getElementById("ageError").textContent = "Required";
+            valid = false;
+        }
+
+        if (phoneNumber === "") {
+            document.getElementById("phoneNumberError").textContent = "Required";
+            valid = false;
+        }
+
+        if (address === "") {
+            document.getElementById("addressError").textContent = "Required";
+            valid = false;
+        }
+
+        if (state === "") {
+            document.getElementById("stateError").textContent = "Required";
+            valid = false;
+        }
+
+        if (country === "") {
+            document.getElementById("countryError").textContent = "Required";
+            valid = false;
+        }
+
+        if (languages.length === 0) {
+            document.getElementById("languagesError").textContent = "Select at least one language";
+            valid = false;
+        }
+
+        if (!declaration.checked) {
+            document.getElementById("declarationError").textContent = "Required";
+            valid = false;
+        }
+
+        if (valid) {
+            // If all fields are valid, you can submit the form or perform other actions here
+            alert("Registration successful!");
+            // Reset the form
+            form.reset();
+        }
+    });
+</script>
+</body>
+</html>

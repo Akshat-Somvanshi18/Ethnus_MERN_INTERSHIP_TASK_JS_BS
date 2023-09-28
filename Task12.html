@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task12</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="d-flex flex-column mt-5">
+    <form id="loginForm" class=" w-25 d-flex flex-column align-items-center mx-auto border pt-5 pb-5 px-3" style="box-shadow: 0px 4px 3px 1px gray;">
+        <h4><i>Instagram</i></h4>
+        <div class="border my-3 w-75 mx-3">
+            <i class="fa fa-user"></i>
+            <input class="border-0 border-start" type="text" id="username" name="username" placeholder="Username" required/>
+        </div>
+        <div class="border my-3 w-75">
+            <i class="fa fa-lock"></i>
+            <input class="border-0 border-start" type="password" id="password" name="password" placeholder="Password" required/>
+        </div>
+
+        <div class="buu w-75">
+            <button type="button" id="loginButton" class="w-100 btn btn-primary">Log In</button>
+        </div>
+
+        <div class="remember-me d-flex justify-content-evenly w-100 my-3">
+            <div class="r1">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+            <a href="#">Forgot password?</a>
+        </div>
+    </form>
+
+<div class="signup-link mx-auto mt-3">
+    Don't have an account? <a href="#">Sign up here</a>
+</div>
+</div>
+
+<script>
+    // Add an event listener to the login button
+    const loginButton = document.getElementById("loginButton");
+    loginButton.addEventListener("click", function () {
+        // Get the entered username and password
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Display the username and password in an alert box
+        alert(`Username: ${username}\nPassword: ${password}`);
+    });
+</script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
